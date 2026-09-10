@@ -80,7 +80,7 @@ A full-stack **Placement Management Information System (MIS) and CRM** designed 
 
 ## 🔄 Architecture Workflow
 
-```mermaid
+
 graph TD
     subgraph Client [React + Vite Frontend]
         AuthUI[Login / Registration]
