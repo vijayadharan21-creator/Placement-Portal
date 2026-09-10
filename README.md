@@ -78,43 +78,6 @@ A full-stack **Placement Management Information System (MIS) and CRM** designed 
 
 ---
 
-## 🔄 Architecture Workflow
-
-```mermaid
-
-graph TD
-    subgraph Client [React + Vite Frontend]
-        AuthUI[Login / Registration]
-        AdminUI[Admin / PO Dashboard]
-        StudentUI[Student Portal]
-    end
-
-    subgraph API [Express.js REST API]
-        AuthRouter[/api/auth]
-        StudentRouter[/api/students]
-        DriveRouter[/api/drives]
-        AppRouter[/api/applications]
-        AnalyticsRouter[/api/analytics]
-    end
-
-    subgraph Database [MongoDB]
-        Users[(Users Collection)]
-        Profiles[(StudentProfiles Collection)]
-        Drives[(Drives Collection)]
-        Applications[(Applications Collection)]
-    end
-
-    subgraph Storage [AWS S3]
-        S3Bucket[(Resume S3 Bucket)]
-    end
-
-    Client -->|Axios with JWT Bearer Token| API
-    API -->|Mongoose Queries & Aggregations| Database
-    StudentRouter -->|Stream PDF & Generate Presigned URLs| Storage
-```
-
----
-
 ## 📁 Project Directory Structure
 
 ```text
