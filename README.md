@@ -283,6 +283,4 @@ To bundle the frontend for production and serve it directly from Express:
 
 ---
 
-## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
